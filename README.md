@@ -22,6 +22,10 @@ Please reference `.env.sample` to make `.env` file.
 
 `formik`, `yup`: form validation
 
+## A screenshot image
+
+<img src="https://github.com/kehyshow/email-multicast/edit/main/README.png">
+
 ## What you would do if you had more time
 
 Because of deadline, I build only simple frontend that has variable inputs.
