@@ -10,14 +10,16 @@ app.use(cors());
 app.post('/sendMail', async (req, res) => {
   let status;
   try {
-    // const { fromName, fromEmail, toName, toEmail, subject, body } = req.body;
-    console.log(req.body);
-    // await mail.sendMail(
-    //   'ironheart0225@gmail.com',
-    //   'subject',
-    //   'Hello World!',
-    // );
-    status = "success";
+    const { fromName, fromEmail, toName, toEmail, subject, body } = req.body;
+    const ret = await mail.sendMail(
+      fromName,
+      config.mail.from,
+      toName,
+      toEmail,
+      subject,
+      body,
+    );
+    status = ret ? "success" : "failture";
   } catch(error) {
     console.log('error:', error);
     status = "failture";
