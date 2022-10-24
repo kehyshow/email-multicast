@@ -24,7 +24,7 @@ Please reference `.env.sample` to make `.env` file.
 
 ## A screenshot image
 
-![a screenshot image](https://github.com/kehyshow/email-multicast/blob/readme.png?raw=true)
+![a screenshot image](https://github.com/kehyshow/email-multicast/blob/main/readme.png?raw=true)
 
 ## What you would do if you had more time
 
