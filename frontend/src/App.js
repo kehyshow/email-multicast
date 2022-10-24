@@ -4,12 +4,14 @@ import * as Yup from 'yup';
 import * as API from './api/API';
 
 const App = () => {
+  const [statusText, setStatusText] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (values) => {
     setLoading(true);
+    setStatusText('');
     API.sendEmail(values).then(res => {
-      console.log(values, res);
+      setStatusText(res.status);
       setLoading(false);
     });
   }
@@ -148,10 +150,13 @@ const App = () => {
             }
           </div>
         </div>
-        <button
-          type="submit"
-          className="border border-[#ced4da] rounded-[.5rem] px-8 py-2 mt-8"
-        >Submit</button>
+        <div className="flex flex-row items-center gap-8 mt-8">
+          <button
+            type="submit"
+            className="border border-[#ced4da] rounded-[.5rem] px-8 py-2"
+          >Submit</button>
+          <span>{statusText}</span>
+        </div>
       </form>
     </div>
   );
