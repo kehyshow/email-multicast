@@ -5,12 +5,20 @@ const env = process.env;
 const config = {
   port: env.PORT,
   mail: {
-    host: env.SMTP_HOST,
     port: env.SMTP_PORT || 587,
-    user: env.SMTP_USER,
-    pass: env.SMTP_PASS,
     secure: env.SMTP_SECURE || false,
-    from: env.SMTP_MAIL,
+  },
+  mail1: {
+    host: env.SMTP_HOST_1,
+    user: env.SMTP_USER_1,
+    pass: env.SMTP_PASS_1,
+    from: env.SMTP_MAIL_1,
+  },
+  mail2: {
+    host: env.SMTP_HOST_2,
+    user: env.SMTP_USER_2,
+    pass: env.SMTP_PASS_2,
+    from: env.SMTP_MAIL_2,
   },
 };
 
